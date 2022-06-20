@@ -27,9 +27,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 0;
-    margin-bottom: 0;
-    min-height: 100vh;            /* fall-back */
+    min-height: 100vh;            
     min-height: -moz-available;
     min-height: -webkit-fill-available;
     min-height: fill-available;
@@ -48,8 +46,9 @@ li {
     text-align: center;
     padding-left: 2rem;
     padding-right: 2rem;
+    text-shadow: 1px 1px #2beeee;
 }
-header {
+.first-page {
     display: flex;
     justify-content: center;
     width: 50%;
@@ -77,8 +76,8 @@ li:hover,h2:hover {
     display:none;
     position: absolute;
     top:0;
-    padding-left: 8vw;
-    padding-top: 5vh;
+    margin-left: 8vw;
+    margin-top: 5vh;
     left:0;
 }
 .burger li {
@@ -97,9 +96,15 @@ li:hover,h2:hover {
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .nav {
-      display:none;
+        visibility:hidden;
+        background-color: white;
     }
     .burger {
         display:inline-block;
     }
+  }
+
+  h1 {
+    border-bottom: 1px solid black;
+    font-size: 2rem;
   }
