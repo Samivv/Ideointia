@@ -4,6 +4,7 @@ const burgerMenu = document.querySelector(".burger");
 const firstPage = document.querySelector(".first-page");
 
 burgerMenu.addEventListener("click", () => {
+    nav.classList.add(".nav-fade-in");
     nav.style.visibility = "visible";
     firstPage.addEventListener("click", () => {
         nav.style.visibility = "hidden";

@@ -47,8 +47,9 @@ li {
     padding-left: 2rem;
     padding-right: 2rem;
     text-shadow: 1px 1px #2beeee;
+    color:white!important;
 }
-.first-page {
+.first-page,.second-page,.third-page {
     display: flex;
     justify-content: center;
     width: 50%;
@@ -93,14 +94,21 @@ li:hover,h2:hover {
     background: radial-gradient(circle, rgba(43,238,238,1) 0%, rgba(174,174,242,1) 100%);
     border-radius: 15px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 928px) {
     /* For mobile phones: */
     .nav {
         visibility:hidden;
-        background-color: white;
+        background-color: rgb(4, 154, 255);
+        width: 100%;
     }
     .burger {
         display:inline-block;
+    }
+    .first-page,.second-page,.third-page {
+        margin-top:auto;
+        margin-bottom: auto;
+        width: 80%;
+        height: 80%;
     }
   }
 
@@ -108,3 +116,17 @@ li:hover,h2:hover {
     border-bottom: 1px solid black;
     font-size: 2rem;
   }
+
+  .nav-fade-in {
+    animation:ease-in;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+  }
+  .nav-fade-out {
+    animation:ease-out;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+  }
+  .message-input {
+    width: 100%;   
+}
