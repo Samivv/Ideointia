@@ -12,13 +12,20 @@ burgerMenu.addEventListener("click", () => {
 });
 
 navActive[0].addEventListener("click", (e) => {
-    location.href = "index.html"
+    clearOtherButtons();
+    navActive[0].classList.add("active");
+
+    location.href = "#first-page"
 });
 navActive[1].addEventListener("click", (e) => {
-    location.href = "showcase.html"
+    clearOtherButtons();
+    navActive[1].classList.add("active");
+    location.href = "#second-page"
 });
 navActive[2].addEventListener("click", (e) => {
-    location.href = "contact.html"
+    clearOtherButtons();
+    navActive[2].classList.add("active");
+    location.href = "#third-page"
 });
 
 function clearOtherButtons() {

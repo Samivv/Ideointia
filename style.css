@@ -2,13 +2,13 @@
 @import '/node_modules/animate.css/animate.css';
 body {
     color:#000000;
+    overflow: hidden;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 300vh;
     width: 100vw;
-    display: flex;
+    display:inline;
     justify-content: center;
-    align-items: center;
     /* background: rgb(63,94,251); */
     /* background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); */
     /* background: rgb(238,174,202);
@@ -19,11 +19,20 @@ body {
     background: rgb(68,66,93);
     background: radial-gradient(circle, rgba(68,66,93,1) 0%, rgba(0,0,0,1) 100%);
 }
+section {
+    min-height: 100vh;
+    min-width: 100vw;
+    margin-left:auto;
+    margin-right:auto;
+    justify-content:center;
+    display:flex;
+}
 .nav {
     /* background: rgba(230, 230, 230, 0);
     -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
     box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); */
-    position: absolute;
+    position: fixed;
+    float:left;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,8 +59,10 @@ li {
     color:white!important;
 }
 .first-page,.second-page,.third-page {
+
     display: flex;
     justify-content: center;
+    margin:auto;
     width: 50%;
     height:70vh;
     background: rgb(43,238,238);
@@ -74,6 +85,7 @@ li:hover,h2:hover {
     cursor:pointer;
 }
 .burger {
+    position:fixed;
     display:none;
     position: absolute;
     top:0;
