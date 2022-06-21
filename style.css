@@ -1,23 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@500&family=Montserrat:wght@300&family=Roboto:wght@100;500&family=Tiro+Devanagari+Marathi&display=swap');
 @import '/node_modules/animate.css/animate.css';
 body {
+    /* background-image: linear-gradient( 135deg, #52E5E7 10%, #130CB7 100%);
+    background-repeat: no-repeat;
+    background-size: auto; */
     color:#000000;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin: 0;
     padding: 0;
     height: 300vh;
     width: 100vw;
     display:inline;
     justify-content: center;
-    /* background: rgb(63,94,251); */
-    /* background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); */
+
+    /* background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); */
     /* background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
     /* background: rgb(174,238,192);
     background: radial-gradient(circle, rgba(174,238,192,1) 0%, rgba(148,187,233,1) 100%); */
     font-family: 'IBM Plex Sans Arabic', sans-serif;
-    background: rgb(68,66,93);
-    background: radial-gradient(circle, rgba(68,66,93,1) 0%, rgba(0,0,0,1) 100%);
+    /* background: rgb(68,66,93);
+    background: radial-gradient(circle, rgba(68,66,93,1) 0%, rgba(0,0,0,1) 100%); */
 }
 section {
     min-height: 100vh;
@@ -26,6 +30,28 @@ section {
     margin-right:auto;
     justify-content:center;
     display:flex;
+    scroll-snap-align: start;
+}
+#first-page {
+    background-image: linear-gradient(to bottom left, #a8edea 0%, #fed6e3 100%);
+}
+#second-page {
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+#second-page:active {
+    transition: 1s ease-in;
+}
+#third-page {
+    background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+}
+
+
+
+main {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    overflow-x: hidden;
 }
 .nav {
     /* background: rgba(230, 230, 230, 0);
@@ -55,22 +81,25 @@ li {
     text-align: center;
     padding-left: 2rem;
     padding-right: 2rem;
-    text-shadow: 1px 1px #2beeee;
+    /* text-shadow: 1px 1px #2beeee; */
     color:white!important;
 }
 .first-page,.second-page,.third-page {
-
-    display: flex;
+    display:flex;
     justify-content: center;
     margin:auto;
-    width: 50%;
-    height:70vh;
-    background: rgb(43,238,238);
-    background: radial-gradient(circle, rgba(43,238,238,1) 0%, rgba(174,174,242,1) 100%);
+    width: 60%;
+    height:80vh;
+    /* background: rgb(43,238,238);
+    background: radial-gradient(circle, rgba(43,238,238,1) 0%, rgba(174,174,242,1) 100%); */
     padding: 0px 30px;
     border-radius: 10px;
     -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
     box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    /* background: rgb(68,66,93);
+    background: radial-gradient(circle, rgba(68,66,93,1) 0%, rgba(0,0,0,1) 100%); */
+    /* background-color: #8fbef1; */
+     
 }
 img {
     filter: opacity(0.4) drop-shadow(0 0 0 #2beeee);
@@ -102,9 +131,10 @@ li:hover,h2:hover {
     background: #2beeee;
 }
 .active {
-    background: rgb(43,238,238);
-    background: radial-gradient(circle, rgba(43,238,238,1) 0%, rgba(174,174,242,1) 100%);
+    /* background: rgb(43,238,238);
+    background: radial-gradient(circle, rgba(43,238,238,1) 0%, rgba(174,174,242,1) 100%); */
     border-radius: 15px;
+    background-color: #8fbef1;
 }
 @media only screen and (max-width: 928px) {
     /* For mobile phones: */
@@ -112,6 +142,7 @@ li:hover,h2:hover {
         visibility:hidden;
         background-color: rgb(4, 154, 255);
         width: 100%;
+        z-index: 2;
     }
     .burger {
         display:inline-block;
@@ -120,7 +151,7 @@ li:hover,h2:hover {
         margin-top:auto;
         margin-bottom: auto;
         width: 80%;
-        height: 80%;
+        min-height: 80%;
     }
   }
 
@@ -139,6 +170,29 @@ li:hover,h2:hover {
     animation-duration: 0.5s;
     animation-iteration-count: infinite;
   }
-  .message-input {
-    width: 100%;   
+
+.header-content {
+    width: 100%;
+}
+.message-sender {
+    display:flex;
+}
+.send-message {
+    width: 10%;
+    height: 5%;
+    background-color:inherit;
+    cursor:pointer;
+}
+input {
+    height: 4%;
+    background-color:inherit;
+}
+.third-page {
+    margin-left:auto;
+    margin-right:auto;
+    z-index: 1;
+}
+.info {
+    background-color:inherit;
+    opacity:90%;
 }
